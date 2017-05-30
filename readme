@@ -1,0 +1,9 @@
+docker run -dit -p 80:80 -p 443:443
+-v D:\Repositories\Docker\nginx-php56\shared:/shared/
+-v D:\Repositories\Docker\nginx-php56\php-conf\fpm\:/etc/php5/fpm/
+-v D:\Repositories\Docker\nginx-php56\nginx-conf\:/etc/nginx/
+-v D:\Repositories\Docker\nginx-php56\app\:/usr/share/nginx/html/
+ikasetebo/nginx-php5:vX.XX
+
+
+https://hub.docker.com/r/ikasetebo/nginx-php5/
