@@ -1,18 +1,20 @@
-FROM ikasetebo/ubuntu14-nginx:v0.01
+FROM ikasetebo/nginx:v1.00-14.04
 
 WORKDIR /etc/nginx/sites-available/
 COPY nginx-conf/sites-available/default default
 
 WORKDIR /
 COPY ./entrypoint/entrypoint.sh /
-RUN apt-get update && apt-get install -y dialog \
-    -y apt-utils \
-    -y php5 \
+RUN apt-get update && apt-get install -y php5 \
     -y php5-fpm \
     -y php5-cgi \
     -y php5-cli \
+    -y php5-curl \
+    -y php5-mysql \
     -y unzip \
     -y ufw \
+    -y apt-utils \
+    -y dialog \
     -y dos2unix \
     && dos2unix ./entrypoint.sh \
     && curl -sS https://getcomposer.org/installer -o composer-setup.php \
