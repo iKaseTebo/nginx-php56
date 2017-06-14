@@ -29,7 +29,4 @@ WORKDIR /
 #
 VOLUME ["/shared/", "/etc/php5/fpm/php.ini", "/etc/nginx/sites-available/default", "/usr/share/nginx/html"]
 #
-EXPOSE 80 443
-#
-#
 ENTRYPOINT ["./entrypoint.sh"]
