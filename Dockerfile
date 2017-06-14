@@ -22,6 +22,6 @@ RUN apt-get update && apt-get install -y php5 \
 #
 COPY php-conf/fpm/php.ini /etc/php5/fpm/php.ini
 #
-VOLUME ["/shared/", "/etc/php5/fpm/", "/etc/nginx/sites-available/", "/usr/share/nginx/html"]
+VOLUME ["/shared/", "/usr/share/nginx/html"]
 #
 ENTRYPOINT ["./entrypoint.sh"]
