@@ -27,9 +27,9 @@ COPY php-conf/fpm/php.ini php.ini
 #
 WORKDIR /
 #
-VOLUME ["/shared/", "/etc/nginx/", "/etc/php5/fpm", "/usr/share/nginx/html"]
+VOLUME ["/shared/", "/etc/php5/fpm/php.ini", "/etc/nginx/sites-available/default", "/usr/share/nginx/html"]
 #
-EXPOSE 80 443 9000
+EXPOSE 80 443
 #
 #
 ENTRYPOINT ["./entrypoint.sh"]
