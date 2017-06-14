@@ -27,6 +27,6 @@ COPY php-conf/fpm/php.ini php.ini
 #
 WORKDIR /
 #
-VOLUME ["/shared/", "/etc/php5/fpm/php.ini", "/etc/nginx/sites-available/default", "/usr/share/nginx/html"]
+VOLUME ["/shared/", "/etc/php5/fpm/", "/etc/nginx/sites-available/", "/usr/share/nginx/html"]
 #
 ENTRYPOINT ["./entrypoint.sh"]
